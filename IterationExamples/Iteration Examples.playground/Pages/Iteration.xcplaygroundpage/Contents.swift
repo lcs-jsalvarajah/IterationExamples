@@ -10,11 +10,42 @@ import PlaygroundSupport
  You use the *for-in* loop to iterate over ranges of numbers.
  Here is a simple loop that adds all the numbers from 1 to 4.
  */
-var sum = 0
-for value in 1...4 {
-    sum = sum + value
+let canvas = Canvas(width: 300, height: 500)
+
+//Make a loop to draw 10 rectangle with increading brightness
+
+for i in stride(from: 0, through: 500, by: 50) {
+    i
+    //Changes Colour
+    canvas.fillColor = Color(hue: 240, saturation: 100, brightness: i/5, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: i, bottomLeftY: i, width: canvas.width, height: 250)
+    canvas.fillColor = Color(hue: 120, saturation: 100, brightness: i/5, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: -i, bottomLeftY: -i, width: canvas.width, height: 250)
+    canvas.fillColor = Color(hue: 0, saturation: 100, brightness: i/5, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: -i, bottomLeftY: i, width: canvas.width, height: 250)
+    canvas.fillColor = Color(hue: 45, saturation: 100, brightness: i/5, alpha: 100)
+    canvas.drawRectangle(bottomLeftX: i, bottomLeftY: -i, width: canvas.width, height: 250)
+
 }
-sum         // equals 10 at this point
+
+for i in stride(from: 0, through: 500, by: 50) {
+    canvas.defaultLineWidth = 5
+    canvas.lineColor = Color.init(hue: i, saturation: 100, brightness: i/5, alpha: 100)
+    canvas.drawLine(fromX: i, fromY: 0, toX: 300, toY: i)
+     canvas.drawLine(fromX: 0, fromY: i, toX: i, toY: 300)
+     canvas.drawLine(fromX: 0, fromY: 300, toX: i, toY: i)
+     canvas.drawLine(fromX: 300, fromY: i, toX: i, toY: 0
+    
+    
+    
+    
+    
+    
+    
+    
+    )
+}
+
 
 /*:
  ### Skipping values in a range
@@ -25,7 +56,7 @@ sum         // equals 10 at this point
  For example, here how to use this type of loop to create a ladder image.
  */
 // Create canvas
-let canvas = Canvas(width: 300, height: 400)
+let anvas = Canvas(width: 300, height: 400)
 
 // Line width
 canvas.defaultLineWidth = 5
