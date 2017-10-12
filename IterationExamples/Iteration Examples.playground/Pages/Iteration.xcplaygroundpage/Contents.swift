@@ -10,31 +10,22 @@ import PlaygroundSupport
  You use the *for-in* loop to iterate over ranges of numbers.
  Here is a simple loop that adds all the numbers from 1 to 4.
  */
-let canvas = Canvas(width: 300, height: 500)
-//Make a loop to draw 10 rectangle with increading brightness
+let canvas = Canvas(width: 300, height: 300)
 
-for i in stride(from: 0, through: 500, by: 50) {
-    i
-    //Changes Colour
-    canvas.fillColor = Color(hue: 240, saturation: 100, brightness: i/5, alpha: 100)
-    canvas.drawRectangle(bottomLeftX: i, bottomLeftY: i, width: canvas.width, height: 250)
-    canvas.fillColor = Color(hue: 120, saturation: 100, brightness: i/5, alpha: 100)
-    canvas.drawRectangle(bottomLeftX: -i, bottomLeftY: -i, width: canvas.width, height: 250)
-    canvas.fillColor = Color(hue: 0, saturation: 100, brightness: i/5, alpha: 100)
-    canvas.drawRectangle(bottomLeftX: -i, bottomLeftY: i, width: canvas.width, height: 250)
-    canvas.fillColor = Color(hue: 45, saturation: 100, brightness: i/5, alpha: 100)
-    canvas.drawRectangle(bottomLeftX: i, bottomLeftY: -i, width: canvas.width, height: 250)
-    
+
+for i in stride(from: 25, through: 275, by: 50) {
+    canvas.drawEllipse(centreX: i, centreY: 275, width: 3, height: 3)
+    canvas.drawEllipse(centreX: i, centreY: 225, width: 3, height: 3)
+    canvas.drawEllipse(centreX: i, centreY: 175, width: 3, height: 3)
+    canvas.drawEllipse(centreX: i, centreY: 225, width: 3, height: 3)
+    canvas.drawEllipse(centreX: i, centreY: 175, width: 3, height: 3)
+    canvas.drawEllipse(centreX: i, centreY: 125, width: 3, height: 3)
+    canvas.drawEllipse(centreX: i, centreY: 75, width: 3, height: 3)
+    canvas.drawEllipse(centreX: i, centreY: 25, width: 3, height: 3)
+    canvas.fillColor = Color.init(hue: i, saturation: 100, brightness: 100, alpha: 100)
+   
 }
 
-
-for i in stride(from: 0, through: 300, by: 20) {
-    canvas.defaultLineWidth = 1
-    canvas.lineColor = Color.init(hue: i, saturation: 100, brightness: i, alpha: 100)
-    canvas.drawLine(fromX: i, fromY: 0, toX: 300, toY: i)
-    canvas.drawLine(fromX: 300, fromY: 300, toX: 0, toY: i)
-
-}
 
 
 
@@ -48,23 +39,7 @@ for i in stride(from: 0, through: 300, by: 20) {
  
  For example, here how to use this type of loop to create a ladder image.
  */
-// Create canvas
-let anvas = Canvas(width: 300, height: 400)
 
-// Line width
-canvas.defaultLineWidth = 5
-
-// Draw the "rungs" of a ladder
-for y in stride(from: 0, through: 400, by: 50) {
-    
-    y
-    
-    // Draw each rung
-    canvas.drawLine(fromX: 100, fromY: y, toX: 200, toY: y)
-    
-    canvas
-    
-}
 /*:
  ### Counting backwards
  You can use a *for-in* loop with the *stride* function to count backwards as well.
