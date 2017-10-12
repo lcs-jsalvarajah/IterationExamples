@@ -11,7 +11,6 @@ import PlaygroundSupport
  Here is a simple loop that adds all the numbers from 1 to 4.
  */
 let canvas = Canvas(width: 300, height: 500)
-
 //Make a loop to draw 10 rectangle with increading brightness
 
 for i in stride(from: 0, through: 500, by: 50) {
@@ -25,26 +24,20 @@ for i in stride(from: 0, through: 500, by: 50) {
     canvas.drawRectangle(bottomLeftX: -i, bottomLeftY: i, width: canvas.width, height: 250)
     canvas.fillColor = Color(hue: 45, saturation: 100, brightness: i/5, alpha: 100)
     canvas.drawRectangle(bottomLeftX: i, bottomLeftY: -i, width: canvas.width, height: 250)
-
+    
 }
 
-for i in stride(from: 0, through: 500, by: 50) {
-    canvas.defaultLineWidth = 5
-    canvas.lineColor = Color.init(hue: i, saturation: 100, brightness: i/5, alpha: 100)
+
+for i in stride(from: 0, through: 300, by: 20) {
+    canvas.defaultLineWidth = 1
+    canvas.lineColor = Color.init(hue: i, saturation: 100, brightness: i, alpha: 100)
     canvas.drawLine(fromX: i, fromY: 0, toX: 300, toY: i)
-     canvas.drawLine(fromX: 0, fromY: i, toX: i, toY: 300)
-     canvas.drawLine(fromX: 0, fromY: 300, toX: i, toY: i)
-     canvas.drawLine(fromX: 300, fromY: i, toX: i, toY: 0
-    
-    
-    
-    
-    
-    
-    
-    
-    )
+    canvas.drawLine(fromX: 300, fromY: 300, toX: 0, toY: i)
+
 }
+
+
+
 
 
 /*:

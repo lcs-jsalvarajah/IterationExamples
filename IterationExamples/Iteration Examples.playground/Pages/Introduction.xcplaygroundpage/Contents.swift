@@ -13,3 +13,4 @@
  
  ![timeline](timeline.png "Timeline")
  */
+let i in stride(from: 25, through: 275, by: 50)
