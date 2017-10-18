@@ -11,6 +11,7 @@ import PlaygroundSupport
  Here is a simple loop that adds all the numbers from 1 to 4.
  */
 let canvas = Canvas(width: 300, height: 300)
+var randam = random(from: 1, toButNotIncluding: 3)
 
 
 for i in stride(from: 25, through: 275, by: 50) {
@@ -23,7 +24,22 @@ for i in stride(from: 25, through: 275, by: 50) {
     canvas.drawEllipse(centreX: i, centreY: 75, width: 3, height: 3)
     canvas.drawEllipse(centreX: i, centreY: 25, width: 3, height: 3)
     canvas.fillColor = Color.init(hue: i, saturation: 100, brightness: 100, alpha: 100)
+    
    
+}
+
+if randam == 1 {
+    canvas.drawLine(fromX: 3, fromY: 50, toX: 75, toY: -75)
+    
+
+    
+}
+
+if randam == 2 {
+    canvas.drawLine(fromX: 25, fromY: -25, toX: 100, toY: 75)
+    
+    
+    
 }
 
 
